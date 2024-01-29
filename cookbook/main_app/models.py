@@ -22,5 +22,9 @@ class RecipeProduct(models.Model):
     product = models.ForeignKey(Product, related_name='product_recipe', on_delete=models.CASCADE)
     weight_grams = models.PositiveIntegerField(null=False, blank=False)
 
+    class Meta:
+        unique_together = ('recipe', 'product')
+
+
     def __str__(self) -> str:
         return f"{self.product.name} - ({self.weight_grams}gr)"
