@@ -57,7 +57,6 @@ def show_recipes_without_product(request):
             'recipes_without_product': recipes_without_product,
             'recipes_less_10gr': recipes_less_10gr,
             'product_id': product_id
-            # 'product_not_found': False
         }
 
         return render(request, 'recipe_table.html', context)
