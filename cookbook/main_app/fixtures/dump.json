@@ -1,0 +1,101 @@
+[
+{
+  "model": "main_app.product",
+  "pk": 1,
+  "fields": {
+    "name": "Мука",
+    "number_used_in_dish": 5
+  }
+},
+{
+  "model": "main_app.product",
+  "pk": 2,
+  "fields": {
+    "name": "Сахар",
+    "number_used_in_dish": 5
+  }
+},
+{
+  "model": "main_app.product",
+  "pk": 3,
+  "fields": {
+    "name": "Яйца",
+    "number_used_in_dish": 5
+  }
+},
+{
+  "model": "main_app.recipe",
+  "pk": 1,
+  "fields": {
+    "name": "Шарлотка"
+  }
+},
+{
+  "model": "main_app.recipe",
+  "pk": 2,
+  "fields": {
+    "name": "Омлет"
+  }
+},
+{
+  "model": "main_app.recipe",
+  "pk": 3,
+  "fields": {
+    "name": "Пирог"
+  }
+},
+{
+  "model": "main_app.recipeproduct",
+  "pk": 1,
+  "fields": {
+    "recipe": 1,
+    "product": 1,
+    "weight_grams": 6
+  }
+},
+{
+  "model": "main_app.recipeproduct",
+  "pk": 2,
+  "fields": {
+    "recipe": 1,
+    "product": 2,
+    "weight_grams": 143
+  }
+},
+{
+  "model": "main_app.recipeproduct",
+  "pk": 3,
+  "fields": {
+    "recipe": 1,
+    "product": 3,
+    "weight_grams": 87
+  }
+},
+{
+  "model": "main_app.recipeproduct",
+  "pk": 4,
+  "fields": {
+    "recipe": 3,
+    "product": 1,
+    "weight_grams": 200
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$40WPhvHMbCTTPw0JCxqQrK$Kr4LT/RU0FeXxAkEexg3RNuGHkXI7yFdLuzcHJmou7g=",
+    "last_login": "2024-01-28T13:48:16.906Z",
+    "is_superuser": true,
+    "username": "root",
+    "first_name": "",
+    "last_name": "",
+    "email": "root@root.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-01-28T13:47:57.021Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
