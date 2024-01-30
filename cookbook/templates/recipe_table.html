@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Таблица рецептов</h1>
+    {% if product_to_exclude %}
+        <br>
+        <h2>Рецепты без след продукта: {{ product_to_exclude }}</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Рецепт</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for recipe in recipes_without_product %}
+                    <tr>
+                        <td>{{ recipe.id }}</td>
+                        <td>{{ recipe.name }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% if recipes_less_10gr %}
+            <h2>Рецепты где содержится меньше 10гр след продукта: {{product_to_exclude}}</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Рецепт</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for recipe_2 in recipes_less_10gr %}
+                        <tr>
+                            <td>{{ recipe_2.id }}</td>
+                            <td>{{ recipe_2.recipe }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+        <h2>Не найдено рецептов, содержащих меньше 10гр - {{product_to_exclude}}</h2>
+        {% endif %}
+    {% else %}
+        <h2>Продукт с ID {{ product_id }} Не найден</h2>
+    {% endif %}
+</body>
+</html>

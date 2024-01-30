@@ -27,4 +27,4 @@ class RecipeProduct(models.Model):
 
 
     def __str__(self) -> str:
-        return f"{self.product.name} - ({self.weight_grams}gr)"
+        return f"{self.recipe} - {self.product.name} - ({self.weight_grams}gr)"
